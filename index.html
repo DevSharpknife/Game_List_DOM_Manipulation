@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games List</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/font.css" />
     <script src="js/app.js"></script>
 </head>
 <body>
@@ -14,164 +15,169 @@
     </header>
 
     <form id= "new-game-form">
-        <div id="form-wrapper">
+        <fieldset>
+            <legend>Player One, Enter Your Game:</legend>
+            <div id="form-wrapper">
 
-            <div class="form-item">
-                <label for="title" class="primary">Title</label>
-                <input type="text" id="title" required/>
+                <div class="form-item">
+                    <label for="title" class="primary">Title</label>
+                    <input type="text" id="title" required/>
+                </div>
+
+                <br>
+
+                <div class="form-item">
+                    <label for="developer" class="primary">Developer</label>
+                    <input type="text" id="developer" required/>
+                </div>
+
+                <br>
+
+                <div class="form-item">
+                    <label for="platform" class="primary">Platform</label>
+                    <select id="platform">
+                        <option value="" disable selected></option>
+                        <option value="PC">PC</option>
+                        <option value="GameBoy">GameBoy</option>
+                        <option value="GameBoy Color">GameBoy Color</option>
+                        <option value="GameBoy Advance">GameBoy Advance</option>
+                        <option value="Nintendo DS">Nintendo DS</option>
+                        <option value="Nintendo 3DS">Nintendo 3DS</option>
+                        <option value="NES">NES</option>
+                        <option value="SNES">SNES</option>
+                        <option value="N64">N64</option>
+                        <option value="Gamecube">Gamecube</option>
+                        <option value="Wii">Wii</option>
+                        <option value="Wii U">Wii U</option>
+                        <option value="Switch">Switch</option>
+                        <option value="Game Gear">Game Gear</option>
+                        <option value="Master System">Master System</option>
+                        <option value="MegaDrive">MegaDrive</option>
+                        <option value="Saturn">Saturn</option>
+                        <option value="Dreamcast">Dreamcast</option>
+                        <option value="PlayStation Portable">PlayStation Portable</option>
+                        <option value="PlayStation Vita">PlayStation Vita</option>
+                        <option value="PlayStation">PlayStation</option>
+                        <option value="PlayStation 2">PlayStation 2</option>
+                        <option value="PlayStation 3">PlayStation 3</option>
+                        <option value="PlayStation 4">PlayStation 4</option>
+                        <option value="XBox">XBox</option>
+                        <option value="XBox 360">XBox 360</option>
+                        <option value="XBox One">XBox One</option>
+                    </select>
+                </div>
+                
+                <br>
+
+                <div class="form-item">
+                    <label class="radio-container">
+                        <input class="playstatus" type="radio" value="Not Played" name="playstatus" checked="checked" required>
+                        <span class="radiomark"></span>
+                        Not Played</label>
+                    <label class="radio-container">
+                        <input class="playstatus" type="radio" value="Played" name="playstatus" required>
+                        <span class="radiomark"></span>
+                        Played</label>
+                    <label class="radio-container">
+                        <input class="playstatus" type="radio" value="Completed" name="playstatus" required>
+                        <span class="radiomark"></span>
+                        Completed</label>
+                </div>
+
+                <div class="form-item">
+                    <p>Tag your shit.</p>
+                    <label class="container">Action
+                        <input type="checkbox" id="action" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Adventure
+                        <input type="checkbox" id="adventure" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">First Person Shooter
+                        <input type="checkbox" id="fps" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Real-Time Strategy
+                        <input type="checkbox" id="rts" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Platformer
+                        <input type="checkbox" id="platformer" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Puzzle
+                        <input type="checkbox" id="puzzle" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Role-Playing Game
+                        <input type="checkbox" id="rpg" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Simulation
+                        <input type="checkbox" id="sim" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Sports 
+                        <input type="checkbox" id="sport" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Horror
+                        <input type="checkbox" id="horror" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Beat'Em Up
+                        <input type="checkbox" id="fighting" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Stealth
+                        <input type="checkbox" id="stealth" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Survival
+                        <input type="checkbox" id="survival" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">MMORPG
+                        <input type="checkbox" id="mmorpg" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Sandbox
+                        <input type="checkbox" id="sandbox" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Virtual Reality
+                        <input type="checkbox" id="vr" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Single Player
+                        <input type="checkbox" id="singleplayer" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Online Multiplayer
+                        <input type="checkbox" id="online" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Local Multiplayer
+                        <input type="checkbox" id="multiplayer" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Retro
+                        <input type="checkbox" id="retro" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Classic
+                        <input type="checkbox" id="classic" name="genre">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <br>
+
             </div>
-
-            <br>
-
-            <div class="form-item">
-                <label for="developer" class="primary">Developer</label>
-                <input type="text" id="developer" required/>
-            </div>
-
-            <br>
-
-            <div class="form-item">
-                <label for="platform" class="primary">Platform</label>
-                <select id="platform">
-                    <option value="" disable selected></option>
-                    <option value="PC">PC</option>
-                    <option value="GameBoy">GameBoy</option>
-                    <option value="GameBoy Color">GameBoy Color</option>
-                    <option value="GameBoy Advance">GameBoy Advance</option>
-                    <option value="Nintendo DS">Nintendo DS</option>
-                    <option value="Nintendo 3DS">Nintendo 3DS</option>
-                    <option value="NES">NES</option>
-                    <option value="SNES">SNES</option>
-                    <option value="N64">N64</option>
-                    <option value="Gamecube">Gamecube</option>
-                    <option value="Wii">Wii</option>
-                    <option value="Wii U">Wii U</option>
-                    <option value="Switch">Switch</option>
-                    <option value="Game Gear">Game Gear</option>
-                    <option value="Master System">Master System</option>
-                    <option value="MegaDrive">MegaDrive</option>
-                    <option value="Saturn">Saturn</option>
-                    <option value="Dreamcast">Dreamcast</option>
-                    <option value="PlayStation Portable">PlayStation Portable</option>
-                    <option value="PlayStation Vita">PlayStation Vita</option>
-                    <option value="PlayStation">PlayStation</option>
-                    <option value="PlayStation 2">PlayStation 2</option>
-                    <option value="PlayStation 3">PlayStation 3</option>
-                    <option value="PlayStation 4">PlayStation 4</option>
-                    <option value="XBox">XBox</option>
-                    <option value="XBox 360">XBox 360</option>
-                    <option value="XBox One">XBox One</option>
-                </select>
-            </div>
+        
+            <input type="submit" value="Save to List" id="save"/>
             
-            <br>
-
-            <div class="form-item">
-                <label class="radio-container">Not Played
-                    <input class="playstatus" type="radio" value="Not Played" name="playstatus" checked="checked" required>
-                    <span class="radio-mark"></span>
-                </label>
-                <label class="radio-container">Played
-                    <input class="playstatus" type="radio" value="Played" name="playstatus" required>
-                    <span class="radio-mark"></span>
-                </label>
-                <label class="radio-container">Completed
-                    <input class="playstatus" type="radio" value="Completed" name="playstatus" required>
-                    <span class="radio-mark"></span>
-                </label>
-            </div>
-
-            <div class="form-item">
-                <p>Tag your shit.</p>
-                <label class="container">Action
-                    <input type="checkbox" id="action" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Adventure
-                    <input type="checkbox" id="adventure" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">First Person Shooter
-                    <input type="checkbox" id="fps" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Real-Time Strategy
-                    <input type="checkbox" id="rts" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Platformer
-                    <input type="checkbox" id="platformer" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Puzzle
-                    <input type="checkbox" id="puzzle" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Role-Playing Game
-                    <input type="checkbox" id="rpg" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Virtual Reality
-                    <input type="checkbox" id="vr" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Simulation
-                    <input type="checkbox" id="sim" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Sports 
-                    <input type="checkbox" id="sport" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Horror
-                    <input type="checkbox" id="horror" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Sandbox
-                    <input type="checkbox" id="sandbox" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Beat'Em Up
-                    <input type="checkbox" id="fighting" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Stealth
-                    <input type="checkbox" id="stealth" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Survival
-                    <input type="checkbox" id="survival" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">MMORPG
-                    <input type="checkbox" id="mmorpg" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Single Player
-                    <input type="checkbox" id="singleplayer" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Online Multiplayer
-                    <input type="checkbox" id="online" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Local Multiplayer
-                    <input type="checkbox" id="multiplayer" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Retro
-                    <input type="checkbox" id="retro" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-                <label class="container">Classic
-                    <input type="checkbox" id="classic" name="genre">
-                    <span class="checkmark"></span>
-                </label>
-            </div>
-            <br>
-
-        </div>
-        <input type="submit" value="Save to List" id="save"/>
+        </fieldset>
     </form>
 
     <div>
