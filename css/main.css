@@ -1,7 +1,16 @@
+header {
+    background-color: #393E41;
+    padding: 1px;
+    color: #D8BD8A;
+}
 
+body {
+display: grid;
+}
 
 .radio-container {
     display: flexbox;
+    align-items: flex-start;
     position: relative;
     padding-left: 30px;
     margin-bottom: 12px;
@@ -23,6 +32,7 @@
     width: 16px;
     background-color: #000000;
     border-radius: 50%;
+    transition: 0.2s all linear;
 }
 
 .radio-container:hover input ~ .radiomark {
@@ -32,7 +42,6 @@
 
 .radio-container input:checked ~ .radiomark {
     background-color: #E94F37;
-    border: 1px solid #000000;
 } 
 
 .radiomark:after {
@@ -54,10 +63,10 @@
     background: #D8BD8A;
 }
 .radio-container #completed:after {
-    top: 3px;
-    left: 3px;
-    width: 8px;
-    height: 8px;
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background: #D8BD8A;
 }
